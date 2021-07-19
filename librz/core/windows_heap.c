@@ -1175,7 +1175,7 @@ static RzTable *__new_heapblock_tbl(void) {
 }
 
 static void w32_list_heaps(RzCore *core, RzOutputMode mode) {
-        init_func();
+	init_func();
 	ULONG pid = core->dbg->pid;
 	PDEBUG_BUFFER db = InitHeapInfo(core->dbg, PDI_HEAPS | PDI_HEAP_BLOCKS);
 	if (!db) {
@@ -1321,7 +1321,7 @@ static void w32_list_heaps_blocks(RzCore *core, RzOutputMode mode, bool flag) {
 //};
 
 static void cmd_debug_map_heap_block_win(RzCore *core, const char *addr, RzOutputMode mode, bool flag) {
-        init_func();
+	init_func();
 	ut64 off = 0;
 	if (!addr) {
 		w32_list_heaps_blocks(core, mode, flag);
